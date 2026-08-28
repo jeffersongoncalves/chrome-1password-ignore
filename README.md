@@ -1,5 +1,7 @@
 # 1Password Ignore List
 
+![1Password Ignore List](banners/1password-ignore-list.png)
+
 Chrome extension (Manifest V3) that injects `data-1p-ignore` / `data-op-ignore` on the `<body>` of sites you configure, so 1Password stops offering to save or fill on them. Useful for local dev domains where 1Password's prompts get in the way.
 
 ## Install
