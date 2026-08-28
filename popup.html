@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { font-family: system-ui, sans-serif; width: 260px; padding: 12px; margin: 0; }
+      h1 { font-size: 13px; margin: 0 0 8px; }
+      label { display: flex; align-items: center; gap: 6px; font-size: 13px; margin-bottom: 10px; }
+      #current { font-weight: 600; word-break: break-all; }
+      ul { list-style: none; margin: 0; padding: 0; max-height: 200px; overflow-y: auto; }
+      li { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 4px 0; border-bottom: 1px solid #eee; }
+      li button { border: none; background: none; cursor: pointer; color: #b00; font-size: 12px; }
+      p.hint { font-size: 11px; color: #666; margin-top: 10px; }
+      #manage { display: block; text-align: right; font-size: 12px; margin-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <h1>1Password Ignore List</h1>
+    <label>
+      <input type="checkbox" id="toggle" />
+      Ignore on <span id="current">…</span>
+    </label>
+    <ul id="list"></ul>
+    <p class="hint">Adds data-1p-ignore / data-op-ignore to &lt;body&gt; on matching sites.</p>
+    <a href="#" id="manage">Manage all →</a>
+    <script src="popup.js"></script>
+  </body>
+</html>

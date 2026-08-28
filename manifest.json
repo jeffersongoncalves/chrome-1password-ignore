@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "1Password Ignore List",
+  "version": "1.0.0",
+  "description": "Injects data-1p-ignore/data-op-ignore on the body of configured sites so 1Password skips them.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "1Password Ignore List"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
